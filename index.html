@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+	<title>Animate Fonts Project</title>
+	<style>
+		#chain{
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div id="chain" class="fa"></div>
+
+	<script>
+		function brakeChain() {
+			let chain = document.getElementById('chain');
+			chain.innerHTML = "&#xf0c1;";
+
+			setTimeout(function() {
+				chain.innerHTML = "&#xf127;";
+			}, 1000);
+		}
+
+		brakeChain();
+
+		setInterval(brakeChain, 2000);
+	</script>
+</body>
+</html>
